@@ -1,80 +1,12 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import Header from './views/Header';
 function App() {
   return (
     <div>
       <button type="button" className="mobile-nav-toggle d-xl-none">
         <i className="icofont-navigation-menu"></i>
       </button>
-
-      <header id="header">
-        <div className="d-flex flex-column">
-          <div className="profile">
-            <img
-              src="assets/img/profile-img.jpg"
-              alt=""
-              className="img-fluid rounded-circle"
-            />
-            <h1 className="text-light">
-              <a href="index.html">Alex Smith</a>
-            </h1>
-            <div className="social-links mt-3 text-center">
-              <a href="#" className="twitter">
-                <i className="bx bxl-twitter"></i>
-              </a>
-              <a href="#" className="facebook">
-                <i className="bx bxl-facebook"></i>
-              </a>
-              <a href="#" className="instagram">
-                <i className="bx bxl-instagram"></i>
-              </a>
-              <a href="#" className="google-plus">
-                <i className="bx bxl-skype"></i>
-              </a>
-              <a href="#" className="linkedin">
-                <i className="bx bxl-linkedin"></i>
-              </a>
-            </div>
-          </div>
-
-          <nav className="nav-menu">
-            <ul>
-              <li className="active">
-                <a href="index.html">
-                  <i className="bx bx-home"></i> <span>Home</span>
-                </a>
-              </li>
-              <li>
-                <a href="#about">
-                  <i className="bx bx-user"></i> <span>About</span>
-                </a>
-              </li>
-              <li>
-                <a href="#resume">
-                  <i className="bx bx-file-blank"></i> <span>Resume</span>
-                </a>
-              </li>
-              <li>
-                <a href="#portfolio">
-                  <i className="bx bx-book-content"></i> Portfolio
-                </a>
-              </li>
-              <li>
-                <a href="#services">
-                  <i className="bx bx-server"></i> Services
-                </a>
-              </li>
-              <li>
-                <a href="#contact">
-                  <i className="bx bx-envelope"></i> Contact
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <button type="button" className="mobile-nav-toggle d-xl-none">
-            <i className="icofont-navigation-menu"></i>
-          </button>
-        </div>
-      </header>
-
+      <Header></Header>
       <section
         id="hero"
         className="d-flex flex-column justify-content-center align-items-center"
@@ -85,7 +17,7 @@ function App() {
             I'm{' '}
             <span
               className="typed"
-              data-typed-items="Software Developer"
+              data-typed-items="a Software Developer"
             ></span>
           </p>
         </div>
@@ -980,10 +912,10 @@ function App() {
 
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-                    frameborder="0"
+                    frameBorder="0"
                     title="maps"
                     style={{ border: '0', width: '100%', height: '290px' }}
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
                 </div>
               </div>
@@ -996,7 +928,7 @@ function App() {
                 >
                   <div className="form-row">
                     <div className="form-group col-md-6">
-                      <label for="name">Your Name</label>
+                      <label htmlFor="name">Your Name</label>
                       <input
                         type="text"
                         name="name"
@@ -1008,7 +940,7 @@ function App() {
                       <div className="validate"></div>
                     </div>
                     <div className="form-group col-md-6">
-                      <label for="name">Your Email</label>
+                      <label htmlFor="name">Your Email</label>
                       <input
                         type="email"
                         className="form-control"
@@ -1021,7 +953,7 @@ function App() {
                     </div>
                   </div>
                   <div className="form-group">
-                    <label for="name">Subject</label>
+                    <label htmlFor="name">Subject</label>
                     <input
                       type="text"
                       className="form-control"
@@ -1033,7 +965,7 @@ function App() {
                     <div className="validate"></div>
                   </div>
                   <div className="form-group">
-                    <label for="name">Message</label>
+                    <label htmlFor="name">Message</label>
                     <textarea
                       className="form-control"
                       name="message"
