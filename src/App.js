@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import About from './views/About';
 import Header from './views/Header';
+import Home from './views/Home';
 function App() {
   return (
     <div>
@@ -7,24 +9,10 @@ function App() {
         <i className="icofont-navigation-menu"></i>
       </button>
       <Header></Header>
-      <section
-        id="hero"
-        className="d-flex flex-column justify-content-center align-items-center"
-      >
-        <div className="hero-container" data-aos="fade-in">
-          <h1>Alex Smith</h1>
-          <p>
-            I'm{' '}
-            <span
-              className="typed"
-              data-typed-items="a Software Developer"
-            ></span>
-          </p>
-        </div>
-      </section>
+      <Home></Home>
 
       <main id="main">
-        <section id="about" className="about">
+        {/* <section id="about" className="about">
           <div className="container">
             <div className="section-title">
               <h2>About</h2>
@@ -107,7 +95,8 @@ function App() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
+        <About></About>
 
         <section id="facts" className="facts">
           <div className="container">

@@ -5,7 +5,6 @@ import SocialLink from '../components/SocialLink';
 
 export default function Header() {
   const [name, setName] = useState('Billie Arianto');
-  const [profession, setProfession] = useState('a Software Developer');
   const socialMedia = [
     {
       name: 'facebook',
