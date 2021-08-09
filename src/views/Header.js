@@ -7,15 +7,15 @@ export default function Header() {
   const [name, setName] = useState('Billie Arianto');
   const socialMedia = [
     {
-      name: 'facebook',
-      link: '#',
-    },
-    {
       name: 'instagram',
       link: '#',
     },
     {
       name: 'linkedin',
+      link: '#',
+    },
+    {
+      name: 'facebook',
       link: '#',
     },
   ];
