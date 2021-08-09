@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 export default function Home() {
   const [name, setName] = useState('Billie Arianto');
-  const [profession, setProfession] = useState('Software Engineer');
+  const [profession, setProfession] = useState('Software Developer');
   return (
     <section
       id="hero"

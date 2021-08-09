@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 export default function About() {
-  const [profession, setProfession] = useState('Software Engineer');
+  const [profession, setProfession] = useState('Software Developer');
   return (
     <section id="about" className="about">
       <div className="container">
@@ -66,19 +66,18 @@ export default function About() {
                   </li>
                   <li>
                     <i className="icofont-rounded-right"></i>{' '}
-                    <strong>Freelance:</strong> Available
+                    <strong>Job Opportunities:</strong> Available
                   </li>
                 </ul>
               </div>
             </div>
             <p>
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio
-              vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor
-              incidunt officia tempore. Et eius omnis. Cupiditate ut dicta
-              maxime officiis quidem quia. Sed et consectetur qui quia
-              repellendus itaque neque. Aliquid amet quidem ut quaerat
-              cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium
-              dolores.
+              My dream is to build my own start-up company that is useful for
+              many people. I want my life to be a blessing to many people. And
+              to achieve it, almost every day if i have free time I try to
+              develop myself both hard skills and soft skills. Right now, I'm
+              having fun to learn MERN Stack. I wish I could get more
+              opportunities to hone my programming skills.
             </p>
           </div>
         </div>
