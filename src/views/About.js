@@ -25,9 +25,9 @@ export default function About() {
           </div>
           <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <h3>{profession}</h3>
-            <p className="font-italic">
+            <p className="">
               My name is Billie Arianto. I'm a {profession}. I am from Lamongan,
-              but I live in Surabaya right now. And this is my profile.
+              but I live in Surabaya right now. And this is about me.
             </p>
             <div className="row">
               <div className="col-lg-6">

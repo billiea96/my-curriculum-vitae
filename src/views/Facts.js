@@ -6,7 +6,7 @@ export default function Facts() {
       <div className="container">
         <div className="section-title">
           <h2>Facts</h2>
-          <p>Some facts about me</p>
+          {/* <p>Some facts about me</p> */}
         </div>
 
         <div className="row no-gutters">

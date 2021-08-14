@@ -504,6 +504,14 @@ section {
   border: 2px solid #1f5297;
 }
 
+.resume .resume-item .certificate-link {
+  color: #040b14;
+}
+
+.resume .resume-item .certificate-link:hover {
+  color: #37b3ed;
+}
+
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
