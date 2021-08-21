@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 export default function Home() {
-  const [name, setName] = useState('Billie Arianto');
-  const [profession, setProfession] = useState('Software Developer');
+  const [name] = useState('Billie Arianto');
+  const [profession] = useState('Software Developer');
   return (
     <section
       id="hero"

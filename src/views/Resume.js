@@ -34,7 +34,7 @@ export default function Resume() {
             <h3 className="resume-title">Course</h3>
             <div className="resume-item pb-0" id="resume-course-dicoding">
               <h4>
-                <a href="#resume-course-dicoding" class="certificate-link">
+                <a href="#resume-course-dicoding" className="certificate-link">
                   Back End Developer Course
                 </a>
               </h4>
@@ -49,7 +49,7 @@ export default function Resume() {
                     href="https://www.dicoding.com/certificates/72ZD2RVGJZYW"
                     target="_blank"
                     rel="noreferrer"
-                    class="certificate-link"
+                    className="certificate-link"
                   >
                     Cloud Practitioner Essentials (Belajar Dasar AWS Cloud)
                   </a>
@@ -59,7 +59,7 @@ export default function Resume() {
                     href="https://www.dicoding.com/certificates/JLX116DGGX72"
                     target="_blank"
                     rel="noreferrer"
-                    class="certificate-link"
+                    className="certificate-link"
                   >
                     Belajar Dasar Pemrograman JavaScript
                   </a>
@@ -69,7 +69,7 @@ export default function Resume() {
                     href="https://www.dicoding.com/certificates/N9ZOD8M40PG5"
                     target="_blank"
                     rel="noreferrer"
-                    class="certificate-link"
+                    className="certificate-link"
                   >
                     Belajar Membuat Aplikasi Back-End untuk Pemula
                   </a>
@@ -83,7 +83,7 @@ export default function Resume() {
                   href="https://courses.edx.org/certificates/140b92865bc7456cabfafe75246d5ca0"
                   target="_blank"
                   rel="noreferrer"
-                  class="certificate-link"
+                  className="certificate-link"
                 >
                   SD4X: Programming for the Web with JavaScript
                 </a>

@@ -4,25 +4,25 @@ import NavMenu from '../components/NavMenu';
 import SocialLink from '../components/SocialLink';
 
 export default function Header() {
-  const [name, setName] = useState('Billie Arianto');
+  const [name] = useState('Billie Arianto');
   const socialMedia = [
     {
       name: 'instagram',
-      link: '#',
+      link: 'https://www.instagram.com/billiea96/',
     },
     {
       name: 'linkedin',
-      link: '#',
+      link: 'https://www.linkedin.com/in/billie-arianto-970a77169/',
     },
-    {
-      name: 'facebook',
-      link: '#',
-    },
+    // {
+    //   name: 'facebook',
+    //   link: '#',
+    // },
   ];
   const navMenu = [
     {
       label: 'Home',
-      link: 'index.html',
+      link: '#hero',
       iconName: 'bx-home',
       isActive: 1,
     },
@@ -39,15 +39,9 @@ export default function Header() {
       isActive: 0,
     },
     {
-      label: 'Portofolio',
-      link: '#portofolio',
+      label: 'Portfolio',
+      link: '#portfolio',
       iconName: 'bx-book-content',
-      isActive: 0,
-    },
-    {
-      label: 'Services',
-      link: '#services',
-      iconName: 'bx-server',
       isActive: 0,
     },
     {

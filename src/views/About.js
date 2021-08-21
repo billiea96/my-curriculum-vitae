@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 export default function About() {
-  const [profession, setProfession] = useState('Software Developer');
+  const [profession] = useState('Software Developer');
   return (
     <section id="about" className="about">
       <div className="container">

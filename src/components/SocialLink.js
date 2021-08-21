@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function SocialLink(props) {
   return (
-    <div className="social-links mt-3 text-center">
+    <div className="my-social-links mt-3 text-center">
       {props.socialMedia &&
         props.socialMedia.map((media, index) => (
           <a key={index} href={media.link} className={media.name}>
