@@ -1,6 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
+import Axios from 'axios';
 
 export default function Contact() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
+  const [loading, setLoading] = useState('');
+
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    // console.log('te');
+    setError('');
+    setSuccess('');
+    setLoading(true);
+    try {
+      const { data } = await Axios.post('/api/send', {
+        name,
+        email,
+        subject,
+        message,
+      });
+      setSuccess(data.message);
+      setLoading(false);
+    } catch (err) {
+      const errMsg =
+        err.response && err.response.data.message
+          ? err.response.data.message
+          : err.message;
+      setError(errMsg);
+      setLoading(false);
+    }
+  };
   return (
     <section id="contact" className="contact">
       <div className="container">
@@ -50,9 +85,9 @@ export default function Contact() {
 
           <div className="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
             <form
-              action="forms/contact.php"
-              method="post"
               className="php-email-form"
+              onSubmit={submitHandler}
+              action="/"
             >
               <div className="form-row">
                 <div className="form-group col-md-6">
@@ -64,6 +99,8 @@ export default function Contact() {
                     id="name"
                     data-rule="minlen:4"
                     data-msg="Please enter at least 4 chars"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
                   <div className="validate"></div>
                 </div>
@@ -76,6 +113,8 @@ export default function Contact() {
                     id="email"
                     data-rule="email"
                     data-msg="Please enter a valid email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                   <div className="validate"></div>
                 </div>
@@ -85,10 +124,12 @@ export default function Contact() {
                 <input
                   type="text"
                   className="form-control"
-                  name="subject"
                   id="subject"
+                  name="subject"
                   data-rule="minlen:4"
                   data-msg="Please enter at least 8 chars of subject"
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
                 />
                 <div className="validate"></div>
               </div>
@@ -100,15 +141,15 @@ export default function Contact() {
                   rows="10"
                   data-rule="required"
                   data-msg="Please write something for us"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
                 <div className="validate"></div>
               </div>
               <div className="mb-3">
-                <div className="loading">Loading</div>
-                <div className="error-message"></div>
-                <div className="sent-message">
-                  Your message has been sent. Thank you!
-                </div>
+                {loading && <LoadingBox></LoadingBox>}
+                {error && <MessageBox variant="error">{error}</MessageBox>}
+                {success && <MessageBox variant="sent">{success}</MessageBox>}
               </div>
               <div className="text-center">
                 <button type="submit">Send Message</button>

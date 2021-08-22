@@ -6,7 +6,13 @@ export default function SocialLink(props) {
     <div className="my-social-links mt-3 text-center">
       {props.socialMedia &&
         props.socialMedia.map((media, index) => (
-          <a key={index} href={media.link} className={media.name}>
+          <a
+            key={index}
+            href={media.link}
+            className={media.name}
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className={`bx bxl-${media.name}`}></i>
           </a>
         ))}

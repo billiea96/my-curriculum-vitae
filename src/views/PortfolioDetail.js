@@ -65,7 +65,7 @@ export default function PortfolioDetail(props) {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <i class="icofont-paper-clip"></i> Source Code
+                      <i className="icofont-paper-clip"></i> Source Code
                     </a>
                   </li>
                 </ul>
