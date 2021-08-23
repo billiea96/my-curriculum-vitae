@@ -3,10 +3,32 @@ import nodemailer from 'nodemailer';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import path from 'path';
+import emailValidator from 'deep-email-validator';
 
 const router = express.Router();
 dotenv.config();
 
+const isEmailValid = async (req, res, next) => {
+  const { email } = req.body;
+  const respon = await emailValidator.validate({
+    email: email,
+    sender: email,
+    validateRegex: true,
+    validateMx: true,
+    validateTypo: true,
+    validateDisposable: true,
+    validateSMTP: false,
+  });
+  const { valid } = respon;
+  // console.log(respon);
+  if (!valid) {
+    return res.status(400).send({
+      status: 'fail',
+      message: 'Please provide a valid email address.',
+    });
+  }
+  next();
+};
 const mailServer = 'MAILTRAP';
 // const mailServer = 'GMAIL';
 const transport = {
@@ -28,7 +50,7 @@ transporter.verify((error, success) => {
   }
 });
 
-router.post('/send', (req, res, next) => {
+router.post('/send', isEmailValid, (req, res, next) => {
   const { name, email, subject, message } = req.body;
   let content = `name: ${name} \nemail: ${email} \nmessage: ${message} `;
 

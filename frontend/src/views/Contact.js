@@ -11,6 +11,7 @@ export default function Contact() {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [loading, setLoading] = useState('');
+  const [disabled, setDisabled] = useState(false);
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -18,6 +19,7 @@ export default function Contact() {
     setError('');
     setSuccess('');
     setLoading(true);
+    setDisabled(true);
     try {
       const { data } = await Axios.post('/api/send', {
         name,
@@ -26,15 +28,15 @@ export default function Contact() {
         message,
       });
       setSuccess(data.message);
-      setLoading(false);
     } catch (err) {
       const errMsg =
         err.response && err.response.data.message
           ? err.response.data.message
           : err.message;
       setError(errMsg);
-      setLoading(false);
     }
+    setLoading(false);
+    setDisabled(false);
   };
   return (
     <section id="contact" className="contact">
@@ -152,7 +154,9 @@ export default function Contact() {
                 {success && <MessageBox variant="sent">{success}</MessageBox>}
               </div>
               <div className="text-center">
-                <button type="submit">Send Message</button>
+                <button type="submit" disabled={disabled}>
+                  Send Message
+                </button>
               </div>
             </form>
           </div>
