@@ -2,6 +2,7 @@ import express from 'express';
 import nodemailer from 'nodemailer';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import path from 'path';
 
 const router = express.Router();
 dotenv.config();
@@ -27,7 +28,7 @@ transporter.verify((error, success) => {
   }
 });
 
-router.post('/api/send', (req, res, next) => {
+router.post('/send', (req, res, next) => {
   const { name, email, subject, message } = req.body;
   let content = `name: ${name} \nemail: ${email} \nmessage: ${message} `;
 
@@ -68,12 +69,20 @@ router.post('/api/send', (req, res, next) => {
   });
 });
 
-router.post('/', (req, res) => {
-  console.log('connect');
-});
-
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use('/', router);
-app.listen(5000);
+app.use('/api', router);
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, '/frontend/build')));
+app.post('/', (req, res) => {
+  console.log('connect');
+});
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/frontend/build/index.html'));
+});
+
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
+  console.log(`Server serve at http://127.0.0.1:${port}`);
+});
