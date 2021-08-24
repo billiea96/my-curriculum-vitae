@@ -72,21 +72,21 @@ router.post('/send', isEmailValid, (req, res, next) => {
         message: 'Your message has been sent. Thank you!',
       });
 
-      transporter.sendMail(
-        {
-          from: 'billiea48@gmail.com',
-          to: email,
-          subject: 'Submission was successful',
-          text: `Thank you for contacting us!\n\nForm details\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`,
-        },
-        function (error, info) {
-          if (error) {
-            console.log(error);
-          } else {
-            console.log('Message sent: ' + info.response);
-          }
-        }
-      );
+      // transporter.sendMail(
+      //   {
+      //     from: 'billiea48@gmail.com',
+      //     to: email,
+      //     subject: 'Submission was successful',
+      //     text: `Thank you for contacting us!\n\nForm details\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`,
+      //   },
+      //   function (error, info) {
+      //     if (error) {
+      //       console.log(error);
+      //     } else {
+      //       console.log('Message sent: ' + info.response);
+      //     }
+      //   }
+      // );
     }
   });
 });
