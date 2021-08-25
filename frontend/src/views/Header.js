@@ -57,7 +57,7 @@ export default function Header() {
         <div className="profile">
           <img
             src="/assets/img/my-profile.jpg"
-            alt="Profile"
+            alt="My Profile"
             className="img-fluid rounded-circle"
           />
           <h1 className="text-light">

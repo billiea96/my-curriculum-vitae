@@ -37,7 +37,12 @@ export default function PortfolioDetail(props) {
             <div className="portfolio-details-container">
               <div className="owl-carousel portfolio-details-carousel">
                 {portfolio.imgs.map((img, index) => (
-                  <img key={index} src={img} className="img-fluid" alt="" />
+                  <img
+                    key={index}
+                    src={img}
+                    className="img-fluid"
+                    alt={img.split('/')[5].split('.')[0].replace(/-/g, ' ')}
+                  />
                 ))}
               </div>
               <div className="portfolio-info">

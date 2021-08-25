@@ -20,7 +20,7 @@ export default function About() {
             <img
               src="assets/img/my-profile.jpeg"
               className="img-fluid"
-              alt=""
+              alt="My Profile"
             />
           </div>
           <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
@@ -39,7 +39,7 @@ export default function About() {
                   <li>
                     <i className="icofont-rounded-right"></i>{' '}
                     <strong>Website:</strong>{' '}
-                    <a href="https://www.billiearianto.my.id">
+                    <a href="http://www.billiearianto.my.id">
                       billiearianto.my.id
                     </a>
                   </li>

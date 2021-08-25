@@ -39,7 +39,14 @@ export default function Portofolio() {
                 className={`col-lg-4 col-md-6 portfolio-item ${item.groupFilter}`}
               >
                 <div className="portfolio-wrap">
-                  <img src={item.src} className="img-fluid" alt="" />
+                  <img
+                    src={item.src}
+                    className="img-fluid"
+                    alt={item.src
+                      .split('/')[5]
+                      .split('.')[0]
+                      .replace(/-/g, ' ')}
+                  />
                   <div className="portfolio-links">
                     <a
                       href={item.display}
