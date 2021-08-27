@@ -61,7 +61,7 @@ export default function Header() {
             className="img-fluid rounded-circle"
           />
           <h1 className="text-light">
-            <a href="index.html">{name}</a>
+            <a href="http://billiearianto.my.id">{name}</a>
           </h1>
           <SocialLink socialMedia={socialMedia}></SocialLink>
         </div>

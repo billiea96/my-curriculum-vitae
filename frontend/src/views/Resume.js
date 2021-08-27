@@ -27,7 +27,7 @@ export default function Resume() {
               <p>
                 I graduated with GPA 3.902 and labeled with the Summa Cum Laude
                 predicate. And I was also active in some student organizations
-                during college.
+                during in the university.
               </p>
             </div>
 

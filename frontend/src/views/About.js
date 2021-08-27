@@ -39,9 +39,7 @@ export default function About() {
                   <li>
                     <i className="icofont-rounded-right"></i>{' '}
                     <strong>Website:</strong>{' '}
-                    <a href="http://www.billiearianto.my.id">
-                      billiearianto.my.id
-                    </a>
+                    <a href="http://billiearianto.my.id">billiearianto.my.id</a>
                   </li>
                   <li>
                     <i className="icofont-rounded-right"></i>{' '}
